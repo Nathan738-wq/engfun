@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materials - EngFun</title>
+  
+  <!-- Google Fonts Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">EngFun</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="materi.html" class="active">Materials</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="flashcard.html">Flashcard</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">📚 English Learning Materials</h1>
+    <p class="subtitle">Choose the topic you want to learn</p>
+    
+    <div class="materi-grid">
+      
+      <!-- Materi 1 -->
+      <div class="materi-card">
+        <div class="materi-icon">🔤</div>
+        <h3>Basic Grammar</h3>
+        <p>Simple Present Tense, Present Continuous, and To Be</p>
+        <a href="#" class="btn-materi" onclick="showMateri(1)">Open Material →</a>
+      </div>
+
+      <!-- Materi 2 -->
+      <div class="materi-card">
+        <div class="materi-icon">🗣️</div>
+        <h3>Daily Conversation</h3>
+        <p>Greeting, Introduction, and Everyday Conversations</p>
+        <a href="#" class="btn-materi" onclick="showMateri(2)">Open Material →</a>
+      </div>
+
+      <!-- Materi 3 -->
+      <div class="materi-card">
+        <div class="materi-icon">📝</div>
+        <h3>Vocabulary Builder</h3>
+        <p>100+ Basic Vocabulary with Example Sentences</p>
+        <a href="#" class="btn-materi" onclick="showMateri(3)">Open Material →</a>
+      </div>
+
+      <!-- Materi 4 -->
+      <div class="materi-card">
+        <div class="materi-icon">❓</div>
+        <h3>Question Words</h3>
+        <p>What, Where, When, Who, Why, How</p>
+        <a href="#" class="btn-materi" onclick="showMateri(4)">Open Material →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="materiModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <div id="modal-body">
+        <!-- Content will be inserted by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

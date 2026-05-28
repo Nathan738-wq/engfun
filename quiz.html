@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - EngFun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">EngFun</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="materi.html">Materi</a></li>
+      <li><a href="quiz.html" class="active">Quiz</a></li>
+      <li><a href="flashcard.html">Flashcard</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">🧠 English Quiz Challenge</h1>
+
+    <div id="quiz-container">
+
+      <!-- Start Screen -->
+      <div id="start-screen" class="quiz-screen active">
+        <h2>Test Your English Knowledge!</h2>
+        <p>10 Pertanyaan • Waktu: 15 Menit</p>
+        <button onclick="startQuiz()" class="btn-start">Mulai Quiz Sekarang</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="quiz-screen">
+        <div class="quiz-header">
+          <span id="question-number">1/10</span>
+          <div class="score-display">
+            Score: <span id="current-score" class="score-number">0</span> / 10
+          </div>
+          <div class="timer">
+            <i class="fas fa-clock"></i> <span id="time">900</span>s
+          </div>
+        </div>
+        
+        <div id="question-text" class="question"></div>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="feedback"></div>
+        
+        <button id="next-btn" onclick="nextQuestion()" class="btn-next" style="display: none;">
+          Soal Selanjutnya →
+        </button>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="quiz-screen">
+        <h2>Quiz Selesai!</h2>
+        <div class="score-circle">
+          <span id="score">0</span> / 10
+        </div>
+        <p id="result-message"></p>
+        <div class="result-buttons">
+          <button onclick="restartQuiz()" class="btn-restart">Ulangi Quiz</button>
+          <a href="materi.html" class="btn-review">Kembali ke Materi</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

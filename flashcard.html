@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard - EngFun</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">EngFun</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="materi.html">Materi</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="flashcard.html" class="active">Flashcard</a></li>
+      <li><a href="about.html">About</a></li> 
+    </ul>
+    <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+  </nav>
+
+  <div class="container">
+    <div class="flashcard-header">
+      <h1 class="page-title">🃏 Vocabulary Flashcard</h1>
+      <p class="subtitle">Pelajari kosakata baru dengan cara yang menyenangkan</p>
+    </div>
+
+    <div class="flashcard-container">
+      <div id="flashcard" class="flashcard">
+        <div class="flashcard-inner">
+          <!-- Front Side -->
+          <div class="flashcard-front">
+            <h2 id="word">Word</h2>
+            <p class="category">Vocabulary</p>
+          </div>
+          <!-- Back Side -->
+          <div class="flashcard-back">
+            <h3 id="meaning">Meaning</h3>
+            <p><strong>Example:</strong> <span id="example"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard-controls">
+        <button onclick="prevCard()" class="control-btn">
+            <i class="fas fa-chevron-left"></i> Previous
+        </button>
+  
+        <button onclick="flipCard()" class="flip-btn">
+            <i class="fas fa-sync-alt"></i> Flip Card
+        </button>
+  
+        <button onclick="nextCard()" class="control-btn"> 
+            Next <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <div class="progress">
+      <span id="progress-text">1 / 7</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
